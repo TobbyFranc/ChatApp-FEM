@@ -1,0 +1,326 @@
+:root{
+    --bgColour: rgba(175, 226, 226, 0.9);
+
+    /* Colors */
+
+    --subHeadPaleViolet: hsl(276, 100%, 81%);
+    --leftChatModerateViolet: hsl(276, 55%, 52%);
+    --rightChatDesaturatedDarkViolet: hsl(271, 15%, 43%);
+    --placeHolderTextGrayishBlue: hsl(206, 6%, 79%);
+    --mainHeadingVeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --paragraphDarkGrayishViolet: hsl(270, 7%, 64%);
+
+    /* Gradients */
+
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    --gradientBg: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+
+    /* Secondary */
+
+   --White: hsl(0, 0%, 100%);
+    --appBackgroundLightGrayishViolet: hsl(270, 20%, 96%);
+    --submitBtnBgVeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --radioBtnOutlineVeryLightMagenta: hsl(289, 100%, 72%);
+
+    /* Typography */
+
+    --bodyFontSize: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--White);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg{
+    width: 550px;
+    height: 90vh;
+    z-index: -2;
+}
+
+.darkbg{
+    position: absolute;
+    top: -5px;
+    left: -165px;
+    border-radius: 0 0 50% 50%;
+    /* background-color: var(--LightViolet); */
+    background-image: linear-gradient( 45deg, var(--LightViolet), var(--LightMagenta) );
+}
+.lightbg{
+    position: absolute;
+    bottom: -5px;
+    right: -205px;
+    border-radius: 50% 50% 0 0;
+    background-color: var(--appBackgroundLightGrayishViolet);
+    opacity: .4;
+}
+
+/* ENDD OF BG DESIGN */
+
+main{
+    max-width: 900px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    /* display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr; */
+}
+
+.text{
+    max-width: 428px;
+}
+
+
+.mobile{
+    width: 250px;
+    min-height: 500px;
+    background-color: var(--appBackgroundLightGrayishViolet);
+    border: 8px solid var(--White);
+    border-radius: 24px;
+    box-shadow: 3px 4px 16px 7px var(--placeHolderTextGrayishBlue);
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    /* background-image: var(--gradientBg); */
+    background-image: linear-gradient( to right, var(--LightViolet), var(--LightMagenta) );
+    border-radius: 20px 20px 4px 4px;
+    position: relative;
+}
+
+.bezel{
+    width: 60%;
+    height: 3vh;
+    background-color: var(--White);
+    border-radius: 0 0 20px 20px;
+    margin: auto;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-end;
+    color: var(--White);
+    margin-top: 12px;
+}
+
+.profile p{
+    cursor: pointer;
+}
+
+.profileDet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-left: -32px;
+}
+
+.userImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+}
+
+.detail{
+    padding-left: 12px;
+}
+
+.detail .name{
+    font-size: 0.8rem;
+}
+.detail .bio{
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--subHeadPaleViolet);
+}
+
+/* END OF MOBILE HEADER DESIGN */
+
+.chats{
+    width: 100%;
+    padding: 0 8px;
+    font-size: 0.6rem;
+    /* background-color: aqua; */
+}
+
+.receiverTxt{
+    width: 65%;
+    max-width: 180px;
+    color: var(--leftChatModerateViolet);
+    background-color: var(--placeHolderTextGrayishBlue);
+    border-radius: 12px 12px 12px 3px;
+    padding: 8px;
+    margin: 6px 0;
+}
+.senderTxt{
+    max-width: 140px;
+    color: var(--rightChatDesaturatedDarkViolet);
+    background-color: var(--White);
+    border-radius: 12px 12px 3px 12px;
+    padding: 8px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 12px 2px var(--placeHolderTextGrayishBlue);
+}
+
+
+.sender{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.sendImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+
+.receiverDet{
+    width: 80%;
+    max-width: 180px;
+    color: var(--White);
+    background-image: var(--gradientBg);
+    border-radius: 12px 12px 12px 3px;
+    padding: 4px;
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.activity{
+    display: flex;
+    justify-content: space-between;
+}
+
+#range{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--radioBtnOutlineVeryLightMagenta);
+    margin-right: 4px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.activity p{
+    font-size: .5rem;
+    color: var(--radioBtnOutlineVeryLightMagenta);
+}
+
+.price p{
+    font-size: .9rem;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.txtInput{
+    position: relative;
+}
+
+.txtInput input{
+    width: 100%;
+    padding: 8px 18px;
+    margin: 6px auto;
+    outline: none;
+    /* border: 1px solid var(--placeHolderTextGrayishBlue); */
+    border: none;
+    border-radius: 32px;
+    color: var(--placeHolderTextGrayishBlue);
+    font-size: 0.6rem;
+}
+
+.txtInput input:focus{
+    outline: 2px solid var(--placeHolderTextGrayishBlue);
+}
+
+.txtInput button{
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--submitBtnBgVeryDarkDesaturatedViolet);
+    width: 24px;
+    height: 24px;
+    color: var(--White);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.txtInput button:hover{
+    background-image: var(--gradientBg);
+}
+
+/* END OF MOBILE DESIGN */
+
+
+.text h1{
+    color: var(--mainHeadingVeryDarkDesaturatedViolet);
+    line-height: 80px;
+}
+
+.text p{
+    color: var(--paragraphDarkGrayishViolet);
+    line-height: 24px;
+    font-weight: 500;
+}
+
+/* END OF DESKTOP DESIGN */
+
+/* RESPOSIVE DESIGN */
+
+@media screen and (max-width: 800px) {
+    .bg{
+        width: 320px;
+    }
+
+    .darkbg{
+        left: -190px;
+    }
+
+    .lightbg{
+        right: -290px;
+        bottom: -500px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text{
+        text-align: center;
+    }
+}
